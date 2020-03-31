@@ -5,13 +5,16 @@
 }
 
 .navbar {
-    padding: 1%;
+    padding-top: 25px;
     display: flex;
     flex-flow: row nowrap;
-    width: 80%;
-    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .nav-logo {
@@ -33,36 +36,98 @@
 }
 
 .user-actions {
-    width: 15%;
+    display: flex;
+    align-items: center;
 }
 
 .btn {
     background: #3897F0;
     outline: none;
     border: none;
-    padding: 3% 10%;
+    padding: 7px 10px;
     color: #fff;
     font-size: 14px;
     border-radius: 4px;
 }
 
+
 .btn-light {
     color: #3897F0;
     background: transparent;
     cursor: pointer;
+    border: none;
+    padding: 7px 10px;
 }
 
-@media only screen and (max-width: 1023px) {
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 122px;
+}
 
+.footer-navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.footer-navbar-item {
+    margin-left: 15px;
+}
+
+.footer-navbar-item:first-child {
+    margin-left: 0;
+}
+
+.footer-navbar-item a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #003569;
+}
+
+.copyright {
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #999999;
+}
+
+#language {
+    border: 1px solid #999999;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1023px) {
     .navbar {
         padding: 5% 0;
+        justify-content: space-between;
     }
 
-    .search-input {
+    .search {
         display: none;
     }
 
-    .user-actions {
-        width: 40%;
+
+    .footer-container {
+        margin: 0 auto;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 7px;
+    }
+
+    .footer-navbar-item {
+        text-align: center;
     }
 }
