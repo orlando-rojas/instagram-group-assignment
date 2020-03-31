@@ -3,3 +3,66 @@
     margin: 0;
     padding: 0;
 }
+
+.navbar {
+    padding: 1%;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-content: center;
+    height: 100%;
+}
+
+.nav-logo * {
+    margin: auto 5%;
+}
+
+.search-input {
+    text-align: center;
+    background: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    padding: 3% 5%;
+}
+
+.user-actions {
+    width: 15%;
+}
+
+.btn {
+    background: #3897F0;
+    outline: none;
+    border: none;
+    padding: 3% 10%;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.btn-light {
+    color: #3897F0;
+    background: transparent;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1023px) {
+
+    .navbar {
+        padding: 5% 0;
+    }
+
+    .search-input {
+        display: none;
+    }
+
+    .user-actions {
+        width: 40%;
+    }
+}
