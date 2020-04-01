@@ -90,7 +90,7 @@ body {
 
     .photos-options{
         height: 46px;
-        column-gap: 0px;
+        gap: 15%;
     }
     .photos-options img {
         display: inline-block;

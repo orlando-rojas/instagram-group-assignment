@@ -4,12 +4,95 @@
     padding: 0;
 }
 
+body {
+    background-color: #FAFAFA;
+
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.justify-items-center {
+    justify-items: center;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+.align-items-center {
+    align-items: center;
+}
+
+.photos-options {
+    height: 53px;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #999999;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 28px;
+}
+.photos-options img {
+    display: none;
+}
+.photos-options span {
+    display: inline-block;
+}
+.photos-options-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-content: space-between;
+}
+
+.photos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.photo {
+    grid-column-end: span 1;
+}
+.photo img {
+    width: 100%;
+}
+
+.w-100-percent {
+    width: 100%;
+}
+
+.max-width-935 {
+    max-width: 935px;
+}
+
+.photo-option-active {
+    border-top: 1px solid #262626;
+    color: #262626;
+}
+
+
 .navbar {
     padding-top: 25px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+}
+
+header {
+    width: 100%;
+    background-color: white;
+    padding-bottom: 2%;
 }
 
 .container {
@@ -104,18 +187,17 @@
 
 @media screen and (max-width: 1023px) {
     .navbar {
-        padding: 5% 0;
+        padding: 5% 2%;
+        width: 100%;
         justify-content: space-between;
+        
     }
 
     .search {
         display: none;
     }
 
-
     .footer-container {
-        margin: 0 auto;
-        width: 80%;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -129,5 +211,32 @@
 
     .footer-navbar-item {
         text-align: center;
+    }
+
+    .photos-options{
+        height: 46px;
+        column-gap: 0px;
+    }
+    .photos-options img {
+        display: inline-block;
+    }
+    .photos-options span {
+        display: none;
+    }
+
+    .photos-options-container {
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        justify-content: space-evenly;
+    }
+    .photos-options-container div{
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        justify-content: space-evenly;
+    }
+
+    .photos {
+        gap: 5px;
     }
 }
