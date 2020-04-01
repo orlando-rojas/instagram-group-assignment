@@ -6,7 +6,7 @@
 
 body {
     background-color: #FAFAFA;
-
+    font-family: 'Roboto', sans-serif;
 }
 
 .content {
@@ -90,9 +90,10 @@ body {
 }
 
 header {
-    width: 100%;
+    min-width: 100%;
     background-color: white;
     padding-bottom: 2%;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .container {
@@ -116,6 +117,13 @@ header {
     border: 1px solid #DBDBDB;
     border-radius: 3px;
     padding: 3% 5%;
+}
+
+.search-input::placeholder {
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: #999999;
 }
 
 .user-actions {
@@ -185,7 +193,150 @@ header {
     border-radius: 5px;
 }
 
-@media screen and (max-width: 1023px) {
+.profile {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'pic main main main'
+      'pic info info info'
+      'pic bio bio bio'
+      'related related related related';
+    max-width: 935px;
+    margin: 23px auto;
+    text-align: center;
+    background: #FAFAFA;
+  }
+
+  .btn-follow {
+    width: 61px;
+    padding: 6px 10px;
+    line-height: 18px;
+  }
+  
+  .profile a {
+    text-decoration: none;
+  }
+  
+  .profile-main,
+  .profile-info,
+  .profile-bio {
+    max-width: 410px;
+    text-align: left;
+  }
+  
+  .profile-main,
+  .profile-info {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  
+  .profile-main {
+    grid-template-areas: 'pm-title pm-btn .';
+  }
+  
+  .profile-info {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #262626;
+  }
+  
+  .profile-bio {
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: #262626;
+    margin-bottom: 60px;
+    margin-top: 20px;
+  }
+
+  .profile-bio h2 {
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  .profile-bio a {
+    font-size: 16px;
+    color: #003569;
+  }
+  
+  .profile-related ul {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .profile-related img {
+    width: 77px;
+  }
+  
+  .profile-related p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+  }
+  
+  .profile-related a,
+  .profile-related p {
+    color: #262626;
+  }
+  
+  /* Grid */
+  /* Area */
+  /* Names */
+  .profile-pic {
+    margin-left: 30px;
+    margin-bottom: 50px;
+    grid-area: pic;
+  }
+  
+  .profile-main {
+    grid-area: main;
+    margin-bottom: 20px;
+  }
+  
+  .profile-main h1 {
+    grid-area: pm-title;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 32px;
+    color: #262626;
+  }
+  
+  .profile-main button {
+    grid-area: pm-btn;
+  }
+  
+  .profile-info {
+    grid-area: info;
+  }
+  
+  .profile-bio {
+    grid-area: bio;
+  }
+  
+  .profile-related {
+    grid-area: related;
+  }
+
+  .related-profiles a p{
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #262626;
+    margin-top: 15px;
+  }
+
+  .related-profiles a img {
+      height: 77px;
+      width: 77px;
+  }
+
+  @media screen and (max-width: 1023px) {
     .navbar {
         padding: 5% 2%;
         width: 100%;
@@ -239,4 +390,61 @@ header {
     .photos {
         gap: 5px;
     }
+
+    .profile {
+        grid-template-areas:
+        'pic main . .'
+        'bio bio bio .'
+        'related related related related'
+        'info info info info';
+        gap: 1vw;
+      }
+
+      .profile-bio {
+        margin-bottom: 25px;
+        margin-left: 4%;
+      }
+  
+      .profile-pic{
+          margin: 0;
+      }
+    
+      .profile-bio h2 {
+        font-weight: normal;
+      }
+    
+      .profile-main {
+        display: block;
+      }
+
+      .gray-text {
+        color: #999999;
+      }
+  
+      .photo-option-active {
+          border-top:none;
+          margin-bottom: 12px;
+      }
+  
+      .related-profiles a p{
+          font-size: 12px;
+          margin-top: 8px;
+        }
+  
+      .related-profiles {
+          margin-bottom: 20px;
+      }
+
+      .gray-text::before {
+        content: ' ';
+        display: block;
+      }
+
+      .profile-info {
+        border-top: 1px solid #DBDBDB;
+        border-bottom: 1px solid #DBDBDB;
+        max-width: 100%;
+        text-align: center;
+        padding: 13px;
+      }
 }
